@@ -21,3 +21,7 @@ management:
     web:
       exposure:
         include: refresh, health # allow call /actuator/refresh
+
+
+app:
+  message: "test 123"

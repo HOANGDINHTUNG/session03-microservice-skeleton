@@ -5,18 +5,19 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
         ## Solution 01: github link
-        # git:
-        #   uri: https://github.com/daonbm/ss03-config-files.git
-        #   default-label: main
-        #   clone-on-start: true
+        git:
+          uri: https://github.com/HOANGDINHTUNG/session03-microservice-skeleton
+          default-label: master
+          search-paths: ss03-config-files
+          clone-on-start: true
 
-        ## Solution 02: internal directory
-        native:
-         search-locations:
-           - file:../ss03-config-files
-           - file:./ss03-config-files
+        # ## Solution 02: internal directory
+        # native:
+        #  search-locations:
+        #    - file:../ss03-config-files
+        #    - file:./ss03-config-files
